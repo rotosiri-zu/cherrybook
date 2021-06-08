@@ -1,4 +1,4 @@
-#メソッドの定義
+#2.6 メソッドの定義
 
 def add(a,b)
   a + b
@@ -37,6 +37,7 @@ end
 #ひらがなのメソッドを呼び出す
 あいさつする#=> "はろー、わーるど！"
 
+#2.6.1 メソッドの定義
 def add(a,b)
   #returnも使えるが、使わないほうが主流
   return a + b
@@ -68,7 +69,7 @@ end
 greeting(nil) #=>"countryを入力してください"
 greeting('japan')#=>"こんにちは"
 
-#メソッド定義における引数の()
+#2.6.2 メソッド定義における引数の()
 #引数がない場合は()を付けないほうが主流
 def greeting
   'こんにちは'
@@ -77,4 +78,13 @@ end
 #()を付けても良いが、省略されることが多い
 def greeting()
   'こんにちは'
+end
+
+#()を省略できるが、引数がある場合は()をつけることの方が多い
+def greeting country
+  if country == 'japan'
+    'こんにちは'
+  else
+    'hello'
+  end  
 end
