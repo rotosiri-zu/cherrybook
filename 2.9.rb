@@ -18,3 +18,36 @@
 
 #2.9.3 指数表現
 2e-3#=>0.002
+
+#2.9.4 数値クラスのあれこれ
+10.class #=>integer
+1.5.class #=>Float
+
+#Ruby2.3以前は整数クラスが2つあった
+10.class #=>Fixnum
+9999999999999999999.class #=>Bignum
+
+#Ruby2.4以後はどちらもintegerクラスになった
+10.class #=>integer
+9999999999999999999.class #=>integer
+
+#有理数リテラルを使う(3rが有理数リテラル)
+r = 2/3r
+r #=>(2/3)
+r.class#=>Rational
+
+#文字列から有理数に変換する
+r = '2/3'.to_r
+r #=>(2/3)
+r.class#=>Rational
+
+#複素数リテラルを使う(0.5iが複素数リテラル)
+c = 0.3-0.5i
+c #=>(0.3-0.5i)
+c.class#=>Complex
+
+#文字列から複素数に変換する
+c = '0.3-0.5i'.to_c
+c #=>(0.3-0.5i)
+c.class#=>Complex
+
