@@ -105,3 +105,81 @@ unless status=='ok' then
   '何か異常があります'
 end
 #=>'何か異常があります'
+
+#2.10.4 case文
+
+country = 'italy'
+
+#if文を使う場合
+if country=='japan'
+  'こんにちは'
+elsif country=='us'
+  'Hello'
+elsif country=='italy'
+  'ciao'
+else
+  '???'
+end
+#=>"ciao"
+
+#case文を使う場合
+case country
+when 'japan'
+  'こんにちは'
+when 'us'
+  'Hello'
+when 'italy'
+  'ciao'
+else
+  '???'
+end
+#=>"ciao"
+
+#when筋に複数の値を指定する
+country='アメリカ'
+case country
+when 'japan','日本'
+  'こんにちは'
+when 'us','アメリカ'
+  'Hello'
+when 'italy','イタリア'
+  'ciao'
+else
+  '???'
+end
+#=>"Hello"
+
+country='italy'
+
+message=
+  case country
+  when 'japan'
+    'こんにちは'
+  when 'us'
+    'Hello'
+  when 'italy'
+    'ciao'
+  else
+    '???'
+  end
+
+message#=>"ciao"
+
+country='italy'
+
+case country
+when 'japan'then'こんにちは'
+when 'us'then'Hello'
+when 'italy'then'ciao'
+else'???'
+end
+#=>"ciao"
+
+#2.10.5 条件演算子(三項演算子)
+n=11
+n>10?'10より大きい':'10以下'
+#=>"10より大きい"
+
+n=11
+message=n>10?'10より大きい':'10以下'
+message#=>"10より大きい"
