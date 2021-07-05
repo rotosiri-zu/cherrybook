@@ -58,4 +58,20 @@ multiple_of_three?(4) #=>false
 multiple_of_three?(5) #=>false
 multiple_of_three?(6) #=>true
 
+#2.11.3 !で終わるメソッド
+a='ruby'
 
+# upcaseだと変数aの値は変化しない
+a.upcase #=>"RUBY"
+a #=>"ruby"
+
+# upcase!だと変数aの値も大文字に変わる
+a.upcase! #=>"RUBY"
+a #=>"RUBY"
+
+def reverse_upcase!(s)
+  s.reverse!.upcase!
+end
+s='ruby'
+reverse_upcase!(s) #=>"YBUR"
+s #=>"YBUR"
