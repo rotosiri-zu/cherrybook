@@ -6,3 +6,16 @@
 # lengtgh も size も、 どちらも文字数を返す
 'hello'.length #=>5
 'hello'.size #=>5
+# 2.12.3 式(Expression)と分(Statement)
+# if 文が値を返すので変数に代入できる
+a = 
+  if true
+    '真です'
+  else
+    '偽です'
+  end
+a #=>"真です"
+
+# メソッドの定義も実は値を（シンボル）を返している
+b = def foo;end
+b #=>:foo
