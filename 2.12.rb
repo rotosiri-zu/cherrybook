@@ -19,6 +19,7 @@ a #=>"真です"
 # メソッドの定義も実は値を（シンボル）を返している
 b = def foo;end
 b #=>:foo
+
 # 2.12.4 疑似変数
 #nilとtrueとfalseこのほかにも
 
@@ -73,3 +74,9 @@ a #=> "hello"
 # stringクラスや、数値のintegerクラスは組み込みライブラリ
 # 標準ライブラリ Dateクラスなど
 # gam 外部ライブラリ
+
+# dateライブラリを読み込むとDateクラスが使えるようになる
+require 'date'
+Date.today #=> #<Date: 2017-04-07((2457851j,Os,On),+Os,2299161j)>
+
+require './2.5.3'
