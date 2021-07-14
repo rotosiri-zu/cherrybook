@@ -80,3 +80,16 @@ require 'date'
 Date.today #=> #<Date: 2017-04-07((2457851j,Os,On),+Os,2299161j)>
 
 require './2.5.3'
+
+# 2.12.8 load
+# requireは1回しかライブラリやrbファイルを読み込まない
+
+load'./2.5.3.rb' #=>true
+
+# loadを使うと無条件に再読み込みできる(なのでファイルの変更が反映される)
+load'./2.5.3.rb' #=>true
+# loadを使う場合は拡張子のrbを省略できない
+
+# 2.12.9 require_relative
+# foo/hello.rbから見た相対パスでbar/bye.rbを読み込む
+require_relative'../bar/bye'
