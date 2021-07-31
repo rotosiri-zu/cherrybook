@@ -26,3 +26,17 @@ numbers = [1,2,3,4,5,6]
 # ブロックの戻り値が最初に真になった要素を返す
 even_number = numbers.find{ |n| n.even? }
 even_number #=>2
+
+# 4.4.4 inject/reduce
+nujmbers = [1,2,3,4]
+sum = 0
+numbers.each { |n| sum += n }
+sum #=>10
+
+nujmbers = [1,2,3,4]
+sum = numbers.inject(0){ |result, n| result + n }
+sum #=>10
+
+['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'].inject('Sun'){ |result, s| result + s }
+#=>"SunMonTueWedThuFriSat"
+
