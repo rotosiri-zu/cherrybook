@@ -25,3 +25,13 @@ range.include?(6) #=>false
 1..5include?(1) #=>NoMethodError:undefined method 'include' for5:Fixnum
 #()で囲めばエラーにならない
 (1..5).include?(1)#=>true
+
+# 4.5.1 配列や文字列の一部を抜き出す
+a = [1,2,3,4,5]
+# 2番目から4番目までの要素を
+a[1..3]#=>[2,3,4]
+
+a = 'abcdef'
+# 2文字目から4文字目までを抜き出す
+a[1..3]#=>"bcd"
+
