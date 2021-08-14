@@ -35,3 +35,44 @@ a = 'abcdef'
 # 2文字目から4文字目までを抜き出す
 a[1..3]#=>"bcd"
 
+# 4.5.2 n以上m以下、n以上m未満の判定をする
+# 不等号を使う場合
+def liquid?(temperature)
+  # 0度以上100度未満であれば液体、と判定したい
+  0 <= temperature && temperature < 100
+end
+liquid?(-1)#=>false
+liquid?(0)#=>true
+liquid?(99)#=>true
+liquid?(100)#=>false
+
+# 範囲オブジェクトを使う場合
+def liquid?(temperature)
+  (0...100).include?(temperature)
+end
+liquid?(-1)#=>false
+liquid?(0)#=>true
+liquid?(99)#=>true
+liquid?(100)#=>false
+
+# 4.5.3 case文で使う
+def charge(age)
+  case age
+  # 0歳から5歳まで
+  when 0..5
+   0
+  # 6歳から12歳までの場合
+  while 6..12
+   300
+  # 13歳から18歳までの場合
+  while 13..18
+   600
+  # それ以外の場合
+  else
+    1000
+  end
+end
+charge(3) #=>0
+charge(12) #=>300
+charge(16) #=>600
+charge(25) #=>1000
